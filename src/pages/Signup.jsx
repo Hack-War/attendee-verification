@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function Login() {
+export default function Signup() {
     const [showPassword, setShowPassword] = useState(false)
     return (
         <div className='w-full h-screen flex items-center justify-center'>
