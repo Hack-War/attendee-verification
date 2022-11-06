@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { useForm } from '../hooks/useForm'
 
 export default function Form() {
@@ -11,11 +12,13 @@ export default function Form() {
         additionalNote: "",
         contact: ""
     })
+    const navigate = useNavigate()
     return (
         <div className='container mx-auto flex items-center p-10 justify-center w-full h-dash-height'>
             <form className='flex flex-col items-center justify-start w-form' onSubmit={(e) => {
                 e.preventDefault()
                 console.log(value)
+                navigate("/events")
             }}>
                 <h1 className='font-medium text-3xl border-b-2 border-indigo-600'>Create check-in for a new event.</h1>
                 <div className='flex items-center justify-between gap-4  w-full'>
