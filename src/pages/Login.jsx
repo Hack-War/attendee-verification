@@ -1,16 +1,17 @@
 import React, { useState } from 'react'
+import { Navigate, useNavigate } from 'react-router-dom'
 
 export default function Login() {
     const [showPassword, setShowPassword] = useState(false)
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
-
+    const navigate = useNavigate()
     return (
         <div className='w-full h-screen flex items-center justify-center'>
             <div className="w-1/2 h-full bg-indigo-600 flex items-center justify-center relative">
                 <a href='/' className='absolute top-20 left-20 text-white font-bold text-3xl'>etter•</a>
                 <img className='w-96' src='./assets/auth-illu.svg' alt='image' /></div>            <div className="w-1/2 h-full flex items-center justify-center px-32">
-                <form className='w-full' autoComplete='OFF'>
+                <form className='w-full' autoComplete='OFF' onSubmit={() => navigate("/events")}>
                     <h1 className='font-semibold text-4xl'>Log In</h1>
                     <div className='my-8'>
                         <label htmlFor={'email'} className="font-medium">Email address</label>
@@ -36,7 +37,7 @@ export default function Login() {
                         Or
                         <hr className='w-full ml-3' />
                     </div>
-                    <button type="button" className='flex w-full gap-5 justify-center text-sm items-center p-4  transition duration-400 border border-gray-300 font-medium hover:shadow-md rounded-xl mt-8'>
+                    <button type="submit" className='flex w-full gap-5 justify-center text-sm items-center p-4  transition duration-400 border border-gray-300 font-medium hover:shadow-md rounded-xl mt-8'>
                         <img src="./assets/google.png" className='w-8' alt="image" />    Log in with google
                     </button>
                 </form>
