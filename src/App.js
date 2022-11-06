@@ -10,6 +10,7 @@ import "firebase/auth";
 import { getAuth } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 import FirebaseConfig from "./config/firebase";
+import Events from "./pages/Events";
 //init firebas`e
 const application = initializeApp(FirebaseConfig);
 
@@ -18,13 +19,15 @@ const App = () => {
   const location = useLocation();
   console.log(location.pathname);
   return (
-    <div className="font-Poppins">
+    <div className={`font-Poppins ${location.pathname === '/events' && 'bg-gray-50'}`} >
       {location.pathname === "/login" || location.pathname === "/signup" ? (
         <></>
       ) : (
         <Header />
       )}
       <Routes>
+        <Route path="/events" element={<Events />} />
+
         <Route path="/event/new" element={<Form />} />
         {/* Login Route */}
         <Route path="/login" element={<Login />} />
