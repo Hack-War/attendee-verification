@@ -7,7 +7,9 @@ export default function Signup() {
     const [name, setName] = useState()
     return (
         <div className='w-full h-screen flex items-center justify-center'>
-            <div className="w-1/2 h-full bg-indigo-600 flex items-center justify-center"><img className='w-96' src='./assets/auth-illu.svg' alt='image' /></div>
+            <div className="w-1/2 h-full bg-indigo-600 flex items-center justify-center relative">
+                <a href='/' className='absolute top-20 left-20 text-white font-bold text-3xl'>etter•</a>
+                <img className='w-96' src='./assets/auth-illu.svg' alt='image' /></div>
             <div className="w-1/2 h-full flex items-center justify-center px-32">
                 <form className='w-full' autoComplete='OFF'>
                     <h1 className='font-semibold text-4xl'>Sign Up</h1>

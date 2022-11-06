@@ -7,8 +7,11 @@ module.exports = {
     extend: {
       fontFamily: {
         'Poppins': ['Poppins', 'sans-serif']
-      }
-    },
+      },
+      spacing: {
+        'dash-height': 'calc(100vh - 6rem);',
+    }
   },
+},
   plugins: [],
 }
