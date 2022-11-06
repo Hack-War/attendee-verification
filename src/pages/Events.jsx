@@ -26,7 +26,7 @@ export default function Events() {
                             <td className='flex items-center justify-center w-1/5'>Define 2022</td>
                             <td className='flex items-center justify-center w-1/5'>Trivandrum</td>
                             <td className='flex items-center justify-center w-1/5'>31.10.22 6AM to 2.11.22 6PM</td>
-                            <td className='flex items-center justify-center w-1/5'> <Link className=' focus:ring ring-gray-50 flex justify-center gap-1 text-sm items-center p-3 w-32 bg-white font-medium border border-gray-300 hover:bg-gray-50 transition duration-500  rounded-lg'>
+                            <td className='flex items-center justify-center w-1/5'> <Link to={'/users'} className=' focus:ring ring-gray-50 flex justify-center gap-1 text-sm items-center p-3 w-32 bg-white font-medium border border-gray-300 hover:bg-gray-50 transition duration-500  rounded-lg'>
                                 <i className="ri-eye-line"></i>   View
                             </Link></td>
                         </tr>
