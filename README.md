@@ -30,7 +30,7 @@ npm run test
 
 👤 **Hack War**
 
-* Github: [@Hack War](https://github.com/Hack War)
+* Github: [@Hack War](https://github.com/Hack-War)
 
 ## Show your support
 
